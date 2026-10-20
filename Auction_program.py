@@ -1,32 +1,26 @@
 # Auction Program - Blind Bidding System
-# Recreated version based on our project presentation
-
+ 
 print("===================================")
 print("       AUCTION PROGRAM")
 print(" Blind Bidding & Winner Selection")
 print("===================================")
 
-# Dictionary to store participant names and bid amounts
 bids = {}
 
 print("\nWelcome to the Auction Program!")
 
-# Collect bids from participants
 while True:
     name = input("\nEnter participant name: ")
 
     bid_amount = int(input("Enter your bid amount: $"))
-
-    # Store participant name and bid amount
+     
     bids[name] = bid_amount
 
-    # Ask if another participant wants to join
     another = input("Is there another bidder? (yes/no): ").lower()
 
     if another != "yes":
         break
 
-# Check whether any bids were entered
 if len(bids) > 0:
 
     highest_bid = 0
